@@ -6,20 +6,19 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:41:03 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 08:44:21 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/30 11:03:15 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf3d.h"
-#include <unistd.h>
 
 void	map_init(t_env *env)
 {
 	int		y;
 	int		x;
 
-	env->map->width = 20;
-	env->map->height = 20;
+	env->map->width = 11;
+	env->map->height = 11;
 	if (!(env->map->data = malloc(sizeof(*(env->map->data))
 					* env->map->height)))
 		error_quit("Failed to malloc map (height)");
@@ -37,30 +36,52 @@ void	map_init(t_env *env)
 		}
 		y++;
 	}
-	int i = 0;
-	while (i < env->map->width)
+	x = 0;
+	while (x < env->map->width)
 	{
-		env->map->data[0][i] = '#';
-		env->map->data[env->map->height - 1][i] = '#';
-		i++;
+		env->map->data[0][x] = '#';
+		env->map->data[env->map->height - 1][x] = '#';
+		x++;
 	}
-	i = 0;
-	while (i < env->map->height)
+	x = 0;
+	while (x < env->map->height)
 	{
-		env->map->data[i][0] = '#';
-		env->map->data[i][env->map->width - 1] = '#';
-		i++;
+		env->map->data[x][0] = '#';
+		env->map->data[x][env->map->width - 1] = '#';
+		x++;
 	}
-	y = 0;
-	while (y < env->map->height)
-	{
-		x = 0;
-		while (x < env->map->width)
-		{
-			write(1, &(env->map->data[y][x]), 1);
-			x++;
-		}
-		write(1, "\n", 1);
-		y++;
-	}
+	env->map->data[1][1] = '#';
+	env->map->data[1][4] = '#';
+	env->map->data[1][6] = '#';
+	env->map->data[1][9] = '#';
+
+	env->map->data[3][3] = '#';
+	env->map->data[3][5] = '#';
+	env->map->data[3][7] = '#';
+
+	env->map->data[4][3] = '#';
+	env->map->data[4][5] = '#';
+	env->map->data[4][7] = '#';
+
+	env->map->data[5][3] = '#';
+	env->map->data[5][7] = '#';
+
+	env->map->data[6][1] = '#';
+	env->map->data[6][9] = '#';
+
+	env->map->data[7][3] = '#';
+	env->map->data[7][7] = '#';
+
+	env->map->data[8][3] = '#';
+	env->map->data[8][5] = '#';
+	env->map->data[8][7] = '#';
+
+	env->map->data[9][3] = '#';
+	env->map->data[9][5] = '#';
+	env->map->data[9][7] = '#';
+
+	env->map->data[10][1] = '#';
+	env->map->data[10][4] = '#';
+	env->map->data[10][6] = '#';
+	env->map->data[10][9] = '#';
 }

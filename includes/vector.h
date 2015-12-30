@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:46:27 by acazuc            #+#    #+#             */
-/*   Updated: 2015/11/29 15:10:18 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/30 09:28:58 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 typedef struct		s_vector
 {
-	float			x;
-	float			y;
-	float			z;
+	double			x;
+	double			y;
+	double			z;
 }					t_vector;
 
 #endif

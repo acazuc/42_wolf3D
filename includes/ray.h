@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 14:05:46 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 15:13:31 by acazuc           ###   ########.fr       */
+/*   Updated: 2015/12/30 09:26:37 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 typedef struct		s_ray
 {
 	double			length;
-	int				color;
+	unsigned int	color;
 }					t_ray;
 
 #endif
