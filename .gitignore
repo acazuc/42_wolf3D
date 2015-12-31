@@ -1,0 +1,4 @@
+*.o
+libft/*
+*.swp
+rtv1
