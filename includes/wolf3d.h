@@ -6,12 +6,12 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/30 07:49:58 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 09:57:27 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:34:28 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_WOLF3D_H
-# define FT_WOLF3D_H
+#ifndef WOLF3D_H
+# define WOLF3D_H
 
 # include "../libft/includes/libft.h"
 # include "colors.h"

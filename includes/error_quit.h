@@ -6,12 +6,12 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 19:34:46 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 10:03:53 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:31:55 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ERROR_QUIT_H
-# define FT_ERROR_QUIT_H
+#ifndef ERROR_QUIT_H
+# define ERROR_QUIT_H
 
 void	error_quit(char *error_message);
 

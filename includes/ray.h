@@ -6,12 +6,12 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 14:05:46 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 09:26:37 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:32:28 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_RAY_H
-# define FT_RAY_H
+#ifndef RAY_H
+# define RAY_H
 
 typedef struct		s_ray
 {

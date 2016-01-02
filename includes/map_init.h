@@ -6,12 +6,12 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:45:05 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/08 10:46:51 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:32:16 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MAP_INIT_H
-# define FT_MAP_INIT_H
+#ifndef MAP_INIT_H
+# define MAP_INIT_H
 
 # include "env.h"
 

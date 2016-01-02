@@ -6,12 +6,12 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:54:15 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 09:28:40 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/02 13:31:49 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ENV_H
-# define FT_ENV_H
+#ifndef ENV_H
+# define ENV_H
 
 # include "window.h"
 # include "vector.h"
