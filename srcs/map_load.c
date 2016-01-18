@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 13:14:02 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 14:41:17 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/18 15:07:39 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ void		map_load(t_map *map, char *file)
 
 	if (!(file_content = get_file_content(file)))
 		error_quit("Failed to load map file");
-	if ((map->width = get_map_width(file_content)) == -1)
+	if ((map->width = get_map_width(file_content)) <= 1)
 		error_quit("Invalid map (bad width)");
-	if ((map->height = get_map_height(file_content)) == -1)
+	if ((map->height = get_map_height(file_content)) <= 1)
 		error_quit("Invalid map (bad height)");
 	if (!(map->data = malloc(sizeof(*map->data) * map->height)))
 		error_quit("Failed to malloc map");
