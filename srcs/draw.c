@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:13:54 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 10:08:47 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/18 15:15:13 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,8 @@ t_ray	get_ray(t_env *env, int x)
 	d.ray.length = abs((int)(env->window->height / d.perp_wall_dist));
 	if (d.ray.length > env->window->height)
 		d.ray.length = env->window->height;
+	if (d.ray.length < 0)
+		d.ray.length = 0;
 	if (d.side == 0)
 		d.ray.color = EAST;
 	else if (d.side == 1)

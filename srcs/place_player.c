@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 15:01:56 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 15:09:52 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/18 15:17:52 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	place_player(t_env *env)
 
 	if (env->map->data[env->map->height / 2][env->map->width / 2] == ' ')
 	{
-		env->position->x = env->map->width / 2;
-		env->position->y = env->map->height / 2;
+		env->position->x = env->map->width / 2 + .5;
+		env->position->y = env->map->height / 2 + .5;
 		return ;
 	}
 	y = 0;
@@ -31,8 +31,8 @@ void	place_player(t_env *env)
 		{
 			if (env->map->data[y][x] == ' ')
 			{
-				env->position->x = x;
-				env->position->y = y;
+				env->position->x = x + .5;
+				env->position->y = y + .5;
 				return ;
 			}
 			x++;
