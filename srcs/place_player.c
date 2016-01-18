@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 15:01:56 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 15:09:08 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/18 15:09:52 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,5 @@ void	place_player(t_env *env)
 		}
 		y++;
 	}
+	error_quit("No valid place on map");
 }
