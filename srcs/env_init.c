@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 09:34:38 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 10:55:14 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/18 14:37:04 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	env_init(t_env *env)
 {
 	if (!(env->position = malloc(sizeof(*env->position))))
 		error_quit("Failed to malloc position struct");
-	env->position->x = 6;
-	env->position->y = 6;
+	env->position->x = 3;
+	env->position->y = 2;
 	if (!(env->direction = malloc(sizeof(*env->direction))))
 		error_quit("Failed to malloc rotation struct");
 	env->direction->x = -1;

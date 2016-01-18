@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:52:18 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 10:17:48 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/18 12:41:05 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 static void		check_collision(t_env *env, double old_x, double old_y)
 {
-	if (env->position->x < 0 || env->position->x >= env->map->width) {
+	if (env->position->x < 0 || env->position->x >= env->map->width)
+	{
 		env->position->x = old_x;
 	}
-	if (env->position->y < 0 || env->position->y >= env->map->height) {
+	if (env->position->y < 0 || env->position->y >= env->map->height)
+	{
 		env->position->y = old_y;
 	}
-	if (env->map->data[(int)old_y][(int)env->position->x] == '#') {
+	if (env->map->data[(int)old_y][(int)env->position->x] == '#')
+	{
 		env->position->x = old_x;
 	}
-	if (env->map->data[(int)env->position->y][(int)old_x] == '#') {
+	if (env->map->data[(int)env->position->y][(int)old_x] == '#')
+	{
 		env->position->y = old_y;
 	}
 }
