@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 19:32:12 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 14:40:13 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/21 14:11:04 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error_quit(char *error_message)
 {
-	ft_putstr_fd("\e[1;31mError happened: ", 2);
+	ft_putstr_fd("\033[1;31mError happened: ", 2);
 	ft_putendl_fd(error_message, 2);
 	exit(-1);
 }

@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 15:01:56 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 15:17:52 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/01/21 14:09:26 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ void	place_player(t_env *env)
 		env->position->y = env->map->height / 2 + .5;
 		return ;
 	}
-	y = 0;
-	while (y < env->map->height)
+	y = -1;
+	while (++y < env->map->height)
 	{
-		x = 0;
-		while (x < env->map->width)
+		x = -1;
+		while (++x < env->map->width)
 		{
 			if (env->map->data[y][x] == ' ')
 			{
@@ -35,9 +35,7 @@ void	place_player(t_env *env)
 				env->position->y = y + .5;
 				return ;
 			}
-			x++;
 		}
-		y++;
 	}
 	error_quit("No valid place on map");
 }
