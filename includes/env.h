@@ -6,7 +6,7 @@
 /*   By: acazuc <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 08:54:15 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/02 13:31:49 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 11:03:11 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ typedef struct			s_env
 	t_map				*map;
 	double				plane_x;
 	double				plane_y;
+	int					left;
+	int					right;
+	int					up;
+	int					down;
 }						t_env;
 
 #endif

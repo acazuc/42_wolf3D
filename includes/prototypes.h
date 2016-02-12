@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/30 07:51:29 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 15:05:42 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 11:06:07 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 void	draw(t_env *env);
 void	env_init(t_env *env);
 void	error_quit(char *error_message);
-int		key_listener(int key, void *data);
-int		expose_listener(void *data);
+int		key_press_listener(int key, void *data);
+int		key_release_listener(int key, void *data);
+int		loop_listener(void *data);
 void	map_init(t_env *env);
 void	move_forward(t_env *env);
 void	move_backward(t_env *env);

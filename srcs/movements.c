@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:52:18 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 12:41:05 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 11:15:53 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void			move_forward(t_env *env)
 
 	old_x = env->position->x;
 	old_y = env->position->y;
-	env->position->x += env->direction->x / 3.;
-	env->position->y += env->direction->y / 3.;
+	env->position->x += env->direction->x / 10.;
+	env->position->y += env->direction->y / 10.;
 	check_collision(env, old_x, old_y);
 }
 
@@ -51,7 +51,7 @@ void			move_backward(t_env *env)
 
 	old_x = env->position->x;
 	old_y = env->position->y;
-	env->position->x -= env->direction->x / 3.;
-	env->position->y -= env->direction->y / 3.;
+	env->position->x -= env->direction->x / 10.;
+	env->position->y -= env->direction->y / 10.;
 	check_collision(env, old_x, old_y);
 }
