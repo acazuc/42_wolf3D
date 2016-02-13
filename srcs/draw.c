@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:13:54 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 15:15:13 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 13:16:08 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	ray_loop(t_env *env, t_ray_data *d)
 		}
 		if (d->map_x < 0 || d->map_x >= env->map->width || d->map_y < 0
 				|| d->map_y >= env->map->height
-				|| env->map->data[d->map_y][d->map_x] != ' ')
+				|| env->map->data[d->map_y][d->map_x] == '#')
 			d->hit = 1;
 	}
 }
@@ -124,4 +124,5 @@ void	draw(t_env *env)
 	}
 	mlx_put_image_to_window(env->window->mlx, env->window->mlx_window
 			, env->window->img, 0, 0);
+	put_fps(env);
 }

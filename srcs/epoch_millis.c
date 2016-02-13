@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   place_player.c                                     :+:      :+:    :+:   */
+/*   epoch_millis.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/18 15:01:56 by acazuc            #+#    #+#             */
-/*   Updated: 2016/02/12 12:49:24 by acazuc           ###   ########.fr       */
+/*   Created: 2016/01/08 12:59:25 by acazuc            #+#    #+#             */
+/*   Updated: 2016/02/12 12:55:59 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "wolf3d.h"
 
-void	place_player(t_env *env)
+long	epoch_millis(void)
 {
-	int		x;
-	int		y;
+	struct timeval		time;
 
-	y = -1;
-	while (++y < env->map->height)
-	{
-		x = -1;
-		while (++x < env->map->width)
-		{
-			if (env->map->data[y][x] == '1')
-			{
-				env->position->x = x + .5;
-				env->position->y = y + .5;
-				return ;
-			}
-		}
-	}
-	error_quit("No valid place on map");
+	gettimeofday(&time, NULL);
+	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));
 }

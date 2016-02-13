@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 09:34:38 by acazuc            #+#    #+#             */
-/*   Updated: 2016/02/12 11:43:04 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 12:55:46 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ void	env_init(t_env *env)
 		error_quit("Failed to malloc window struct");
 	if (!(env->map = malloc(sizeof(*env->window))))
 		error_quit("Failed to malloc map struct");
+	env->last_time = epoch_millis();
+	env->tmp_fps = 0;
+	env->fps = 0;
 	env->plane_x = 0;
 	env->plane_y = 1;
 	env->left = 0;

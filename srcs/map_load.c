@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 13:14:02 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/18 15:07:39 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 12:50:05 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ static void	map_parse(t_map *map, char *file)
 		}
 		else
 		{
-			if (file[i] != '#' && file[i] != ' ')
+			if (file[i] != '#' && file[i] != ' ' && file[i] != '1')
 				error_quit("Invalid file");
 			map->data[y][x] = file[i];
 			x++;

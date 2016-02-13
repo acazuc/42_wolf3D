@@ -6,7 +6,7 @@
 #    By: acazuc <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 06:50:12 by acazuc            #+#    #+#              #
-#    Updated: 2016/01/21 13:44:41 by acazuc           ###   ########.fr        #
+#    Updated: 2016/02/12 13:15:32 by acazuc           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,8 @@ SRCS_NAME = wolf3d.c \
 			file_length.c \
 			get_file_content.c \
 			place_player.c \
+			put_fps.c \
+			epoch_millis.c \
 
 SRCS = $(addprefix $(SRCS_PATH), $(SRCS_NAME))
 

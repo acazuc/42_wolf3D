@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:10:06 by acazuc            #+#    #+#             */
-/*   Updated: 2016/02/12 11:29:26 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/02/12 13:04:47 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,13 @@ int				loop_listener(void *data)
 		move_forward(env);
 	if (env->down)
 		move_backward(env);
+	if (epoch_millis() - env->last_time >= 1000)
+	{
+		env->fps = env->tmp_fps;
+		env->last_time = epoch_millis();
+		env->tmp_fps = 0;
+	}
+	env->tmp_fps++;
 	draw(env);
 	return (0);
 }
