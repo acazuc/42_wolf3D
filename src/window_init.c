@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 09:46:54 by acazuc            #+#    #+#             */
-/*   Updated: 2015/12/30 08:06:49 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/02 15:44:49 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	window_init(t_env *env)
 {
 	int		loul;
 
-	env->window->width = 1920;
-	env->window->height = 1080;
+	env->window->width = 1280;
+	env->window->height = 720;
 	env->window->fov = 60;
 	env->window->z_far = 30;
 	if (!(env->window->mlx = mlx_init()))

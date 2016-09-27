@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:13:54 by acazuc            #+#    #+#             */
-/*   Updated: 2016/02/12 13:16:08 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/09/27 12:20:29 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,7 +117,13 @@ void	draw(t_env *env)
 		while (y < env->window->height / 2 - ray.length / 2)
 			pixel_put(env, x, y++, CEIL);
 		while (y <= env->window->height / 2 + ray.length / 2)
-			pixel_put(env, x, y++, ray.color);
+		{
+			pixel_put(env, x, y, color_mult(ray.color, 1 - .4
+						* ((y - (env->window->height / 2 - ray.length / 2))
+							/ (float)((env->window->height / 2 + ray.length / 2)
+								- (env->window->height / 2 - ray.length / 2)))));
+			y++;
+		}
 		while (y < env->window->height)
 			pixel_put(env, x, y++, FLOOR);
 		x++;

@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 11:12:18 by acazuc            #+#    #+#             */
-/*   Updated: 2016/01/02 13:31:44 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/09/27 12:21:00 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 # define COLORS_H
 
 # define DEFAULT 0x0FF000
-# define FLOOR 0x006600
-# define CEIL 0x0000066
+# define FLOOR 0x00CD00
+# define CEIL 0x007FFF
 # define NORTH 0xFF0000
-# define SOUTH 0x00FF00
+# define SOUTH 0x66FF66
 # define EAST 0x0000FF
 # define WEST 0xFF6600
 

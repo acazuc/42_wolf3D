@@ -6,7 +6,7 @@
 /*   By: acazuc <acazuc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/08 10:10:06 by acazuc            #+#    #+#             */
-/*   Updated: 2016/02/12 13:04:47 by acazuc           ###   ########.fr       */
+/*   Updated: 2016/03/02 15:46:43 by acazuc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static void		rotate_left(t_env *env)
 	double		cos_val;
 	double		sin_val;
 
-	cos_val = cos(5. / 180. * M_PI);
-	sin_val = sin(5. / 180. * M_PI);
+	cos_val = cos(2.5 / 180. * M_PI);
+	sin_val = sin(2.5 / 180. * M_PI);
 	old_dir_x = env->direction->x;
 	env->direction->x = old_dir_x * cos_val - env->direction->y * sin_val;
 	env->direction->y = old_dir_x * sin_val + env->direction->y * cos_val;
@@ -36,8 +36,8 @@ static void		rotate_right(t_env *env)
 	double	cos_val;
 	double	sin_val;
 
-	cos_val = cos(-5 / 180. * M_PI);
-	sin_val = sin(-5 / 180. * M_PI);
+	cos_val = cos(-2.5 / 180. * M_PI);
+	sin_val = sin(-2.5 / 180. * M_PI);
 	old_dir_x = env->direction->x;
 	env->direction->x = old_dir_x * cos_val - env->direction->y * sin_val;
 	env->direction->y = old_dir_x * sin_val + env->direction->y * cos_val;

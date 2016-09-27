@@ -1,5 +1,4 @@
-*.o
-libft/*
-libft/
+obj
+libft
 *.swp
 wolf3d
